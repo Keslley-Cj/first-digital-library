@@ -1,0 +1,5 @@
+en:
+  api:
+    errors:
+      not_authorized_title: Invalid login
+      action_not_provided: Invalid action

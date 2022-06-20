@@ -1,0 +1,664 @@
+{
+	"info": {
+		"_postman_id": "936ab86d-d4e7-4089-bd07-468b6f16183a",
+		"name": "digital-library",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16000696"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Create",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/vnd.api+json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.api+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"type\": \"user\",\n        \"attributes\": {\n            \"name\": \"Keslley\",\n            \"email\": \"keslley1@gmail.com\",\n            \"password\": \"12345678\"\n        }\n    }\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/api/users",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						},
+						"description": "Atenticação"
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Book",
+			"item": [
+				{
+					"name": "Create",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/vnd.api+json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.api+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"type\": \"book\",\n        \"attributes\": {\n            \"title\": \"Livro 1\",\n            \"author\": \"Autor 1\",\n            \"genre\": \"Genero 1\"\n        }\n    }\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/api/books",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"books"
+							]
+						},
+						"description": "Atenticação"
+					},
+					"response": []
+				},
+				{
+					"name": "Index",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxNWI2NmI5Ny00OWY0LTQyOWQtOTAxMS02YzI5YmM5YzYzODYiLCJzY3AiOiJhcGlfdXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNjU1NjU5NDQ2LCJleHAiOjE2NTU3NDU4NDYsImp0aSI6IjNjYjE0N2I4LWMwMjktNDUwNi1hMjRmLTFkMzgxYzRiYjRjYSJ9.KKjpOXqKZKpFfuD9F4vPpcqQwfuvRpD_2Dm-SP7WPbA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/vnd.api+json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.api+json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/api/books",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"books"
+							],
+							"query": [
+								{
+									"key": "filter[id_eq]",
+									"value": "e14cc753-bbbf-44e3-a1aa-e15bf656f89b",
+									"disabled": true
+								},
+								{
+									"key": "page[number]",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "page[size]",
+									"value": "15",
+									"disabled": true
+								},
+								{
+									"key": "fields[user]",
+									"value": "id,email",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search by author",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxNWI2NmI5Ny00OWY0LTQyOWQtOTAxMS02YzI5YmM5YzYzODYiLCJzY3AiOiJhcGlfdXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNjU1NjU5NDQ2LCJleHAiOjE2NTU3NDU4NDYsImp0aSI6IjNjYjE0N2I4LWMwMjktNDUwNi1hMjRmLTFkMzgxYzRiYjRjYSJ9.KKjpOXqKZKpFfuD9F4vPpcqQwfuvRpD_2Dm-SP7WPbA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/vnd.api+json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.api+json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/api/books?q[author_i_cont]=denis",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"books"
+							],
+							"query": [
+								{
+									"key": "filter[id_eq]",
+									"value": "e14cc753-bbbf-44e3-a1aa-e15bf656f89b",
+									"disabled": true
+								},
+								{
+									"key": "page[number]",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "page[size]",
+									"value": "15",
+									"disabled": true
+								},
+								{
+									"key": "fields[user]",
+									"value": "id,email",
+									"disabled": true
+								},
+								{
+									"key": "q[author_i_cont]",
+									"value": "denis"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search by title",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxNWI2NmI5Ny00OWY0LTQyOWQtOTAxMS02YzI5YmM5YzYzODYiLCJzY3AiOiJhcGlfdXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNjU1NjU5NDQ2LCJleHAiOjE2NTU3NDU4NDYsImp0aSI6IjNjYjE0N2I4LWMwMjktNDUwNi1hMjRmLTFkMzgxYzRiYjRjYSJ9.KKjpOXqKZKpFfuD9F4vPpcqQwfuvRpD_2Dm-SP7WPbA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/vnd.api+json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.api+json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/api/books?q[title_i_cont]=algoritmos",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"books"
+							],
+							"query": [
+								{
+									"key": "filter[id_eq]",
+									"value": "e14cc753-bbbf-44e3-a1aa-e15bf656f89b",
+									"disabled": true
+								},
+								{
+									"key": "page[number]",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "page[size]",
+									"value": "15",
+									"disabled": true
+								},
+								{
+									"key": "fields[user]",
+									"value": "id,email",
+									"disabled": true
+								},
+								{
+									"key": "q[title_i_cont]",
+									"value": "algoritmos"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search by genre",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxNWI2NmI5Ny00OWY0LTQyOWQtOTAxMS02YzI5YmM5YzYzODYiLCJzY3AiOiJhcGlfdXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNjU1NjU5NDQ2LCJleHAiOjE2NTU3NDU4NDYsImp0aSI6IjNjYjE0N2I4LWMwMjktNDUwNi1hMjRmLTFkMzgxYzRiYjRjYSJ9.KKjpOXqKZKpFfuD9F4vPpcqQwfuvRpD_2Dm-SP7WPbA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/vnd.api+json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.api+json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/api/books?q[genre_i_cont]=ti",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"books"
+							],
+							"query": [
+								{
+									"key": "filter[id_eq]",
+									"value": "e14cc753-bbbf-44e3-a1aa-e15bf656f89b",
+									"disabled": true
+								},
+								{
+									"key": "page[number]",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "page[size]",
+									"value": "15",
+									"disabled": true
+								},
+								{
+									"key": "fields[user]",
+									"value": "id,email",
+									"disabled": true
+								},
+								{
+									"key": "q[genre_i_cont]",
+									"value": "ti"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Review",
+			"item": [
+				{
+					"name": "Create",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/vnd.api+json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.api+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"type\": \"review\",\n        \"attributes\": {\n            \"note\": \"3\",\n            \"comment\": \"Este livro é maravilhoso\"\n        }\n    }\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/api/books/:book_id/reviews",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"books",
+								":book_id",
+								"reviews"
+							],
+							"variable": [
+								{
+									"key": "book_id",
+									"value": "dde1a8e3-842c-415b-94d0-9fc7c02c5ce1"
+								}
+							]
+						},
+						"description": "Atenticação"
+					},
+					"response": []
+				},
+				{
+					"name": "Index",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxNWI2NmI5Ny00OWY0LTQyOWQtOTAxMS02YzI5YmM5YzYzODYiLCJzY3AiOiJhcGlfdXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNjU1NjU5NDQ2LCJleHAiOjE2NTU3NDU4NDYsImp0aSI6IjNjYjE0N2I4LWMwMjktNDUwNi1hMjRmLTFkMzgxYzRiYjRjYSJ9.KKjpOXqKZKpFfuD9F4vPpcqQwfuvRpD_2Dm-SP7WPbA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/vnd.api+json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.api+json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/api/books/:book_id/reviews",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"books",
+								":book_id",
+								"reviews"
+							],
+							"query": [
+								{
+									"key": "filter[id_eq]",
+									"value": "e14cc753-bbbf-44e3-a1aa-e15bf656f89b",
+									"disabled": true
+								},
+								{
+									"key": "page[number]",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "page[size]",
+									"value": "15",
+									"disabled": true
+								},
+								{
+									"key": "fields[user]",
+									"value": "id,email",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "book_id",
+									"value": "dde1a8e3-842c-415b-94d0-9fc7c02c5ce1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var response = pm.response.json();",
+							"",
+							"if(response['errors'] === undefined){",
+							"    let token = pm.response.headers.get('Authorization').replace('Bearer ', '')",
+							"    // let typeUser = response.included[0].attributes.name;",
+							"    pm.environment.set('TOKEN', token);",
+							"    //SETANDO CONFORME O TIPO DO USUÁRIO",
+							"    // if(typeUser == 'admin'){",
+							"    //     pm.environment.set('TOKEN_ADMIN', token);",
+							"    // }else if(typeUser == 'graduate'){",
+							"    //     pm.environment.set('TOKEN_GRADUATE', token);",
+							"    // }else if(typeUser == 'partner'){",
+							"    //     pm.environment.set('TOKEN_PARTNER', token);",
+							"    // }else if(typeUser == 'partner_commercial'){",
+							"    //     pm.environment.set('TOKEN_PARTNER_COMMERCIAL', token);",
+							"    // }",
+							"}",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/vnd.api+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\": {\n        \"type\": \"user\",\n        \"attributes\": {\n            \"login\": \"keslley@gmail.com\",\n            \"password\": \"12345678\"\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/login",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": "pt-br",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/api/logout",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

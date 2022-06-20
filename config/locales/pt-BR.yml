@@ -1,0 +1,52 @@
+pt-BR:
+  activemodel:
+    errors:
+      messages:
+        not_found: não encontrado
+        blank: não encontrado
+  activerecord:
+    models:
+      user:
+        one: Usuário
+        other: Usuários
+      book:
+        one: Livro
+        other: Livros
+    attributes:
+      user:
+        id: Id
+        name: Nome
+        email: E-mail
+        password: Senha
+      book:
+        id: Id
+        title: Título
+        author: Autor
+        genre: Gênero
+    errors:
+      messages:
+        record_invalid: Registro inválido
+        invalid: inválido(a)
+        incorrect: incorreto(a)
+        not_found: não encontrado
+        blank: não pode ficar em branco
+        not_a_number: não é um número
+        required: obrigatório(a)
+        taken: já está em uso
+        inclusion: não permitido(a)
+        too_short: é muito curto
+        too_long: é muito longo
+        unavailable: é inválido ou não está disponível
+        invalid_zip_code: é inválido
+        unpermitted: não permitido
+
+  api:
+    errors:
+      not_authorized_title: Login Inválido
+      action_not_provided: Ação inválida
+
+
+  devise:
+    failure:
+      api_user:
+        unauthenticated: Para continuar, efetue login ou registre-se
