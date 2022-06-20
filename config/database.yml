@@ -20,8 +20,8 @@ test:
 production:
   <<: *default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 10 } %>
-  database: dci7fjdvos5jbf
-  username: quxfagswpbcjor
+  database: <%= ENV['DATABASE_URL'] %>
+  # username: quxfagswpbcjor
   host: ec2-54-147-33-38.compute-1.amazonaws.com
-  password: 8d24c286c493b449215e7c07235ecbf3a53909f7fdb8a2187675907bbf3066e0
+  # password: 8d24c286c493b449215e7c07235ecbf3a53909f7fdb8a2187675907bbf3066e0
   port: 5432
