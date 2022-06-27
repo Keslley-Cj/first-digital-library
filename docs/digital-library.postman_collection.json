@@ -96,7 +96,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "{{TOKEN}}",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhOTgwOTBjYi1lNWMwLTRkNjItODMwOC03ZjFlNjZkOGMyNmUiLCJzY3AiOiJhcGlfdXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNjU1NzcwMDMzLCJleHAiOjE2NTU4NTY0MzMsImp0aSI6IjAxZmJjZWJlLWRlNWMtNDZiZi1iYzkzLTI3YzBjMTU1YmViOCJ9.nKhzLLm_FzztGvQ8sN-PS3vR8x-2NSHJF6eiJ6PqvHc",
 									"type": "string"
 								}
 							]
@@ -143,7 +143,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxNWI2NmI5Ny00OWY0LTQyOWQtOTAxMS02YzI5YmM5YzYzODYiLCJzY3AiOiJhcGlfdXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNjU1NjU5NDQ2LCJleHAiOjE2NTU3NDU4NDYsImp0aSI6IjNjYjE0N2I4LWMwMjktNDUwNi1hMjRmLTFkMzgxYzRiYjRjYSJ9.KKjpOXqKZKpFfuD9F4vPpcqQwfuvRpD_2Dm-SP7WPbA",
+									"value": "{{TOKEN}}",
 									"type": "string"
 								}
 							]
@@ -207,7 +207,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxNWI2NmI5Ny00OWY0LTQyOWQtOTAxMS02YzI5YmM5YzYzODYiLCJzY3AiOiJhcGlfdXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNjU1NjU5NDQ2LCJleHAiOjE2NTU3NDU4NDYsImp0aSI6IjNjYjE0N2I4LWMwMjktNDUwNi1hMjRmLTFkMzgxYzRiYjRjYSJ9.KKjpOXqKZKpFfuD9F4vPpcqQwfuvRpD_2Dm-SP7WPbA",
+									"value": "{{TOKEN}}",
 									"type": "string"
 								}
 							]
@@ -226,7 +226,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{URL}}/api/books?q[author_i_cont]=denis",
+							"raw": "{{URL}}/api/books?q[author_i_cont]=autor",
 							"host": [
 								"{{URL}}"
 							],
@@ -257,7 +257,7 @@
 								},
 								{
 									"key": "q[author_i_cont]",
-									"value": "denis"
+									"value": "autor"
 								}
 							]
 						}
@@ -275,7 +275,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxNWI2NmI5Ny00OWY0LTQyOWQtOTAxMS02YzI5YmM5YzYzODYiLCJzY3AiOiJhcGlfdXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNjU1NjU5NDQ2LCJleHAiOjE2NTU3NDU4NDYsImp0aSI6IjNjYjE0N2I4LWMwMjktNDUwNi1hMjRmLTFkMzgxYzRiYjRjYSJ9.KKjpOXqKZKpFfuD9F4vPpcqQwfuvRpD_2Dm-SP7WPbA",
+									"value": "{{TOKEN}}",
 									"type": "string"
 								}
 							]
@@ -294,7 +294,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{URL}}/api/books?q[title_i_cont]=algoritmos",
+							"raw": "{{URL}}/api/books?q[title_i_cont]=livro",
 							"host": [
 								"{{URL}}"
 							],
@@ -325,7 +325,7 @@
 								},
 								{
 									"key": "q[title_i_cont]",
-									"value": "algoritmos"
+									"value": "livro"
 								}
 							]
 						}
@@ -343,7 +343,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxNWI2NmI5Ny00OWY0LTQyOWQtOTAxMS02YzI5YmM5YzYzODYiLCJzY3AiOiJhcGlfdXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNjU1NjU5NDQ2LCJleHAiOjE2NTU3NDU4NDYsImp0aSI6IjNjYjE0N2I4LWMwMjktNDUwNi1hMjRmLTFkMzgxYzRiYjRjYSJ9.KKjpOXqKZKpFfuD9F4vPpcqQwfuvRpD_2Dm-SP7WPbA",
+									"value": "{{TOKEN}}",
 									"type": "string"
 								}
 							]
@@ -362,7 +362,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{URL}}/api/books?q[genre_i_cont]=ti",
+							"raw": "{{URL}}/api/books?q[genre_i_cont]=gene",
 							"host": [
 								"{{URL}}"
 							],
@@ -393,7 +393,7 @@
 								},
 								{
 									"key": "q[genre_i_cont]",
-									"value": "ti"
+									"value": "gene"
 								}
 							]
 						}
@@ -474,7 +474,7 @@
 							"variable": [
 								{
 									"key": "book_id",
-									"value": "dde1a8e3-842c-415b-94d0-9fc7c02c5ce1"
+									"value": "54b42716-fc89-4bfb-bfe7-e07093726f75"
 								}
 							]
 						},
@@ -493,7 +493,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxNWI2NmI5Ny00OWY0LTQyOWQtOTAxMS02YzI5YmM5YzYzODYiLCJzY3AiOiJhcGlfdXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNjU1NjU5NDQ2LCJleHAiOjE2NTU3NDU4NDYsImp0aSI6IjNjYjE0N2I4LWMwMjktNDUwNi1hMjRmLTFkMzgxYzRiYjRjYSJ9.KKjpOXqKZKpFfuD9F4vPpcqQwfuvRpD_2Dm-SP7WPbA",
+									"value": "{{TOKEN}}",
 									"type": "string"
 								}
 							]
@@ -567,18 +567,7 @@
 							"",
 							"if(response['errors'] === undefined){",
 							"    let token = pm.response.headers.get('Authorization').replace('Bearer ', '')",
-							"    // let typeUser = response.included[0].attributes.name;",
 							"    pm.environment.set('TOKEN', token);",
-							"    //SETANDO CONFORME O TIPO DO USUÁRIO",
-							"    // if(typeUser == 'admin'){",
-							"    //     pm.environment.set('TOKEN_ADMIN', token);",
-							"    // }else if(typeUser == 'graduate'){",
-							"    //     pm.environment.set('TOKEN_GRADUATE', token);",
-							"    // }else if(typeUser == 'partner'){",
-							"    //     pm.environment.set('TOKEN_PARTNER', token);",
-							"    // }else if(typeUser == 'partner_commercial'){",
-							"    //     pm.environment.set('TOKEN_PARTNER_COMMERCIAL', token);",
-							"    // }",
 							"}",
 							"",
 							""
@@ -606,7 +595,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"data\": {\n        \"type\": \"user\",\n        \"attributes\": {\n            \"login\": \"keslley@gmail.com\",\n            \"password\": \"12345678\"\n        }\n    }\n}",
+					"raw": "{\n    \"data\": {\n        \"type\": \"user\",\n        \"attributes\": {\n            \"login\": \"keslley1@gmail.com\",\n            \"password\": \"12345678\"\n        }\n    }\n}",
 					"options": {
 						"raw": {
 							"language": "json"
